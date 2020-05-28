@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="custom-css/style.css">
+    <link rel="stylesheet" href="custom-css/style.css?v=1.5">
 
 </head>
 
@@ -31,8 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>  
                  <span class="navbar-text" >
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                    <a id="loginButton"> <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>          
         </div>
@@ -49,7 +48,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a data-toggle="modal" data-target="#reserveModal" role="button" class="btn btn-block nav-link btn-warning"> Reserve Table </a>
+                    <a id="reserveButton" role="button" class="btn btn-block nav-link btn-warning"> Reserve Table </a>
                 </div>
             </div>
         </div>
@@ -94,19 +93,26 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <ol class="carousel-indicators">
-                    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#mycarousel" data-slide-to="1"></li>
-                    <li data-target="#mycarousel" data-slide-to="2"></li>
-                </ol>
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
 
-                 <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
+                     <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                    
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span class="fa fa-pause"></span>
+                    </button>
+                </div>
+                
+
+
 
             </div>
        </div>
@@ -242,11 +248,10 @@
                                 <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
                             </div>
                             <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="custom-control-input" type="checkbox">
-                                    <label class="form-check-label"> Remember me
-                                    </label>
-                                </div>
+                                 <div class="custom-control custom-checkbox mr-sm-2">
+                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                    <label class="custom-control-label" for="customControlAutosizing">Remember me</label>
+                                  </div>
                             </div>
                         </div>
                         <div class="form-row">
@@ -348,11 +353,7 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
-           
-        });
-    </script>
+    <script src="custom-js/scripts.js"></script>
 </body>
 
 </html>
